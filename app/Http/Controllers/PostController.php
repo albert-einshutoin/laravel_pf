@@ -8,6 +8,13 @@ use App\Post;
 class PostController extends Controller
 {
 
+	public function index() {
+
+		$posts = Post::all();
+
+		return view('admin.posts.index', ['posts' => $posts]);
+	}
+
 	public function show(Post $post) {
 
 		return view('layouts.blog-post', ['post' => $post]);
@@ -38,9 +45,5 @@ class PostController extends Controller
 		return back();
 	}
 
-	public function index() {
-
-		return view('admin.posts.index');
-	}
     //
 }
