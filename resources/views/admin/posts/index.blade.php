@@ -55,11 +55,15 @@
 					  <td><img height="40px" src="{{$post->post_image}}" alt="" ></td>
 					  <td>{{$post->created_at->diffForHumans()}}</td>
 					  <td>{{$post->updated_at->diffForHumans()}}</td>
+
+					@can('view', $post)
 					<form method="post" action="{{route('post.destroy', $post->id)}}" enctype="multipart/form-data">
 					@csrf
 					@method('DELETE')
 					  <td><button type="submit" class="btn btn-danger">Delete</button></td>
 					</form>
+					@endcan
+
 					</tr>
 					@endforeach
 

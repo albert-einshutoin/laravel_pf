@@ -24,10 +24,13 @@ class PostController extends Controller
 
 	public function create() {
 
+		$this->authorize('create', Post::class);
 		return view('admin.posts.create');
 	}
 
 	public function store() {
+
+		$this->authorize('create', Post::class);
 
 		$inputs = request()->validate([
 			'title' => 'required|min:8|max:225',
@@ -79,6 +82,7 @@ class PostController extends Controller
 
 	public function destroy(Post $post, Request $request) {
 
+		$this->authorize('delete', $post);
 		$post->delete();
 
 #		Session::flash('message', 'Post was deleted');
