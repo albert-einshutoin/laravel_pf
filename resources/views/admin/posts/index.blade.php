@@ -3,6 +3,18 @@
 	@section('content')
 
 	<h1>All Posts</h1>
+
+	@if(Session::has('message'))
+<!--
+		<div class="alert alert-danger">{{Session::get('message')}}</div>
+-->
+		<div class="alert alert-danger">{{session('message')}}</div>
+	@elseif(session('post-created-message'))
+		<div class="alert alert-success">{{session('post-created-message')}}</div>
+	@elseif(session('post-updated-message'))
+		<div class="alert alert-success">{{session('post-updated-message')}}</div>
+	@endif
+
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -14,19 +26,23 @@
                   <thead>
                     <tr>
                       <th>Id</th>
+                      <th>Owner</th>
                       <th>Title</th>
                       <th>Image</th>
                       <th>Created At</th>
                       <th>Updated At</th>
+                      <th>Delete</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th>Id</th>
+                      <th>Owner</th>
                       <th>Title</th>
                       <th>Image</th>
                       <th>Created At</th>
                       <th>Updated At</th>
+                      <th>Delete</th>
                     </tr>
                   </tfoot>
 				  <tbody>
@@ -34,10 +50,16 @@
 					@foreach($posts as $post)
 					<tr>
 					  <td>{{$post->id}}</td>
-					  <td>{{$post->title}}</td>
-					  <td><image height="40px" src="{{$post->post_image}}" alt="" ></td>
+					  <td>{{$post->user->name}}</td>
+					  <td><a href="{{route('post.edit', $post->id)}}">{{$post->title}}</a></td>
+					  <td><img height="40px" src="{{$post->post_image}}" alt="" ></td>
 					  <td>{{$post->created_at->diffForHumans()}}</td>
 					  <td>{{$post->updated_at->diffForHumans()}}</td>
+					<form method="post" action="{{route('post.destroy', $post->id)}}" enctype="multipart/form-data">
+					@csrf
+					@method('DELETE')
+					  <td><button type="submit" class="btn btn-danger">Delete</button></td>
+					</form>
 					</tr>
 					@endforeach
 
