@@ -17,13 +17,15 @@
 				<div class="form-group">
 					<input type="file" name="avatar">
 				</div>
-				{{$user->avatar}}
 
 				<div class="form-group">
 					<label for="username">Username</label>
 					<input type="text"
 						   name="username"
-						   class="form-control @error('username') is-invalid @enderror"
+						   class="form-control
+								  @error('username')
+								  is-invalid
+								  @enderror"
 						   id="username"
 						   value="{{$user->username}}">
 
@@ -36,7 +38,10 @@
 					<label for="name">Name</label>
 					<input type="text"
 						   name="name"
-						   class"form-control @error('name') is-invalid @enderror"
+						   class="form-control
+								  @error('name')
+								  is-invalid
+								  @enderror"
 						   id="name"
 						   value="{{$user->name}}">
 
