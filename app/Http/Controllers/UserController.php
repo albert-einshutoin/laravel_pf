@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\User;
 
 class UserController extends Controller
 {
+	public function index() {
+
+		$users = User::all();
+
+		return view('admin.users.index', ['users' => $users]);
+	}
 
 	public function show(User $user) {
 
@@ -28,6 +35,15 @@ class UserController extends Controller
 		}
 
 		$user->update($inputs);
+
+		return back();
+
+	}
+
+	public function destroy(User $user) {
+
+		$user->delete();
+		session()->flash('user-deleted', 'User has been deleted');
 
 		return back();
 
