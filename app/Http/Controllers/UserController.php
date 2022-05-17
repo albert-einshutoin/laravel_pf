@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\User;
+use App\Role;
 
 class UserController extends Controller
 {
@@ -17,7 +18,10 @@ class UserController extends Controller
 
 	public function show(User $user) {
 
-		return view('admin.users.profile', ['user' => $user]);
+		return view('admin.users.profile', [
+			'user' => $user,
+			'roles' => Role::all()
+		]);
 
 	}
 
@@ -37,6 +41,12 @@ class UserController extends Controller
 		$user->update($inputs);
 
 		return back();
+
+	}
+
+	public function attach(Role $role) {
+
+		dd($role);
 
 	}
 
