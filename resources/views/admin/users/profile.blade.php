@@ -136,21 +136,35 @@
 					  <td>{{$role->name}}</td>
 					  <td>{{$role->slug}}</td>
 
-					  <form method="post" action="{{route('user.role.attach', $role->id)}}" enctype="multipart/form-data">
+					  <form method="post" action="{{route('user.role.attach', $user)}}" enctype="multipart/form-data">
 					  @csrf
 					  @method('PUT')
-					  <td><button class="btn btn-primary">Attach</button></td>
+					  <input type="hidden" name="role" value="{{$role->id}}">
+					  <td><button class="btn btn-primary"
+									@if($user->roles->contains($role))
+										disabled
+									@endif
+						>Attach</button></td>
 					  </form>
 
 
-					  <td><button type="submit" class="btn btn-danger">Detach</button></td>
+					  <form method="post" action="{{route('user.role.detach', $user)}}" enctype="multipart/form-data">
+					  @csrf
+					  @method('PUT')
+					  <input type="hidden" name="role" value="{{$role->id}}">
+					  <td><button type="submit" class="btn btn-danger"
+									@if(!$user->roles->contains($role))
+										disabled
+									@endif
+							>Detach</button></td>
+					  </form>
 
 					@endforeach
 
-                  </tbody>
-                </table>
-              </div>
-            </div>
+				  </tbody>
+				</table>
+			  </div>
+			</div>
 		  </div>
 			</div>
 		</div>
