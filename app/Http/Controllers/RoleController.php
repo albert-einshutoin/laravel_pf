@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Role;
+use App\Permission;
 
 class RoleController extends Controller
 {
@@ -32,7 +33,8 @@ class RoleController extends Controller
 	public function edit(Role $role) {
 
 		return view('admin.roles.edit', [
-			'role' => $role
+			'role' => $role,
+			'permissions' => Permission::all()
 		]);
 
 	}
@@ -50,6 +52,20 @@ class RoleController extends Controller
 		}
 
 		return back();
+	}
+
+	public function attach_permission(Role $role) {
+
+		$role->permissions()->attach(request('permission'));
+		return back();
+
+	}
+
+	public function detach_permission(Role $role) {
+
+		$role->permissions()->detach(request('permission'));
+		return back();
+
 	}
 
 	public function destroy(Role $role) {

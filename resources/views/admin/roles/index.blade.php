@@ -8,7 +8,7 @@
 </div>
 <div class="row">
 
-	<div class="col-cm-6">
+	<div class="col-cm-3">
 		<form method="post" action="{{route('roles.store')}}">
 			@csrf
 
