@@ -12,6 +12,7 @@ class PostController extends Controller
 	public function index() {
 
 		$posts = auth()->user()->posts()->paginate(5);
+#		$posts = Post::paginate(8);
 
 		return view('admin.posts.index', ['posts' => $posts]);
 	}

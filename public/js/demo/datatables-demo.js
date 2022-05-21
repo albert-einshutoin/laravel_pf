@@ -3,4 +3,6 @@ $(document).ready(function() {
   $('#dataTable').DataTable();
 
   $('#users-table').DataTable();
+
+  $('#posts-table').DataTable();
 });
