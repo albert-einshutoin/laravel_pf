@@ -25,6 +25,14 @@ class UserController extends Controller
 
 	}
 
+	public function profile(User $user) {
+
+		return view('profile',[
+			'user' => $user
+		]);
+
+	}
+
 	public function update(User $user) {
 
 		$inputs = request()->validate([
