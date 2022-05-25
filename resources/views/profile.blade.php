@@ -10,12 +10,10 @@
                   <div class="card-body text-center">
                     <img src="{{$user->avatar}}" alt="avatar"
                       class="rounded-circle img-fluid" style="width: 200px;">
-                    <h5 class="my-3">{{$user->name}}</h5>
-                    <p class="text-muted mb-1">{{$user}}</p>
-                    <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+					<h5 class="my-3">{{$user->name}}</h5>
+					<p class="text-muted mb-1">{{$user->email}}</p>
+                    <p class="text-muted mb-4"></p>
                     <div class="d-flex justify-content-center mb-2">
-                      <button type="button" class="btn btn-primary">Follow</button>
-                      <button type="button" class="btn btn-outline-primary ms-1">Message</button>
                     </div>
                   </div>
                 </div>

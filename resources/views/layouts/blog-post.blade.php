@@ -8,7 +8,7 @@
         <!-- Author -->
         <p class="lead">
           by
-          <a href="#">{{$post->user->name}}</a>
+          <a href="{{route('user', $post->user->id)}}">{{$post->user->name}}</a>
         </p>
 
         <hr>
@@ -43,7 +43,8 @@
         <div class="card my-4">
           <h5 class="card-header">Leave a Comment:</h5>
           <div class="card-body">
-            <form>
+            <form method="post" action="">
+              @csrf
               <div class="form-group">
                 <textarea class="form-control" rows="3"></textarea>
               </div>
