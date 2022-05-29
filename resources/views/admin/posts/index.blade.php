@@ -32,6 +32,7 @@
                       <th>Created At</th>
                       <th>Updated At</th>
                       <th>Delete</th>
+                      <th>View</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -43,6 +44,7 @@
                       <th>Created At</th>
                       <th>Updated At</th>
                       <th>Delete</th>
+                      <th>View</th>
                     </tr>
                   </tfoot>
 				  <tbody>
@@ -63,6 +65,7 @@
 					  <td><button type="submit" class="btn btn-danger">Delete</button></td>
 					</form>
 					@endcan
+					  <td><a href="{{route('post', $post->id)}}">View Post</a></td>
 
 					</tr>
 					@endforeach

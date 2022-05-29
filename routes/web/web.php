@@ -23,4 +23,9 @@ Route::middleware('auth')->group(function() {
 
 	Route::get('/admin', 'AdminsController@index')->name('admin.index');
 
+	Route::get('/admin/comments', 'CommentsController@index')->name('admin.comments');
+	Route::post('/admin/comments', 'CommentsController@store')->name('admin.comments.store');
+	Route::delete('/admin/comments/{comment}/destroy', 'CommentsController@destroy')->name('comment.destroy');
+
+#	Route::get('/admin/comment/replies', 'CommentRepliesController@index')->name('');
 });;

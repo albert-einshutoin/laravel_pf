@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Comment;
 use Illuminate\Http\Request;
 
-class CommentController extends Controller
+class CommentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +14,9 @@ class CommentController extends Controller
      */
     public function index()
     {
+		$comments = Comment::all();
+
+		return view('admin.comments.index', ['comments' => $comments]);
         //
     }
 
@@ -22,8 +25,9 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Comment $comment)
     {
+		return view('layouts.blog-post', ['comment' => $comment]);
         //
     }
 
@@ -35,7 +39,20 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		$request = request()->validate([
+			'body' => 'required',
+		]);
+
+		$data = [
+			'post_id' => request('post_id'),
+			'user_id' => auth()->user()->id,
+			'body' => request('body'),
+		];
+
+		Comment::create($data);
+
+		return back();
+			//
     }
 
     /**
@@ -78,8 +95,12 @@ class CommentController extends Controller
      * @param  \App\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comment $comment)
+    public function destroy(Comment $comment, Request $request)
     {
+		$comment->delete();
+		$request->session()->flash('comment-deleted', 'comment was deleted');
+
+		return back();
         //
     }
 }

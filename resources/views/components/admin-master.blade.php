@@ -62,26 +62,6 @@
 		<x-admin.sidebar.authorization-links></x-admin.sidebar.authorization-links>
 		@endif
 
-
-      <!-- Nav Item - Utilities Collapse Menu -->
-<!--
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-          </div>
-        </div>
-      </li>
--->
-
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -101,7 +81,7 @@
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="/login">Login</a>
             <a class="collapse-item" href="/register">Register</a>
-            <a class="collapse-item" href="/forgot-password">Forgot Password</a>
+            <a class="collapse-item" href="/password/reset">Forgot Password</a>
 <!--
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
