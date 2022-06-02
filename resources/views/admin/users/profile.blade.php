@@ -46,7 +46,7 @@
 						   value="{{$user->name}}">
 
 					@error('name')
-						<div class="alert alert-danger">{{ $message }}</div>
+						<div class="invalid-feedback">{{ $message }}</div>
 					@enderror
 				</div>
 
@@ -54,12 +54,15 @@
 					<label for="email">Email</label>
 					<input type="text"
 						   name="email"
-						   class="form-control"
+						   class="form-control
+								  @error('email')
+								  is-invalid
+								  @enderror"
 						   id="email"
 						   value="{{$user->email}}">
 
 					@error('email')
-						<div class="alert alert-danger">{{ $message }}</div>
+						<div class="invalid-feedback">{{ $message }}</div>
 					@enderror
 				</div>
 
@@ -67,23 +70,29 @@
 					<label for="password">Password</label>
 					<input type="password"
 						   name="password"
-						   class="form-control"
+						   class="form-control
+								  @error('password')
+								  is-invalid
+								  @enderror"
 						   id="password">
 
 					@error('password')
-						<div class="alert alert-danger">{{ $message }}</div>
+						<div class="invalid-feedback">{{ $message }}</div>
 					@enderror
 				</div>
 
 				<div class="form-group">
-					<label for="password-confirm">Confirm Password</label>
+					<label for="password-confirmation">Confirm Password</label>
 					<input type="password"
 						   name="password_confirmation"
-						   class="form-control"
-						   id="password-confirm">
+						   class="form-control
+								  @error('password_confirmation')
+								  is-invalid
+								  @enderror"
+						   id="password-confirmation">
 
 					@error('password_confirmation')
-						<div class="alert alert-danger">{{ $message }}</div>
+						<div class="invalid-feedback">{{ $message }}</div>
 					@enderror
 				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
