@@ -49,7 +49,7 @@
 		@foreach($comments as $comment)
         <!-- Single Comment -->
         <div class="media mb-4">
-          <img class="d-flex mr-3 rounded-circle" height="40px" src="{{$comment->user->avatar}}" alt="">
+          <img class="d-flex mr-3 rounded-circle" width="50px" height="50px" src="{{$comment->user->avatar}}" alt="">
           <div class="media-body">
             <h5 class="media-heading"><a href="{{route('user', $comment->user_id)}}">{{$comment->user->name}}</a></h5>
 		  {{$comment->body}}
