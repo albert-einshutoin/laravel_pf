@@ -46,6 +46,16 @@ class UserController extends Controller
 			$inputs['avatar'] = request('avatar')->store('images');
 		}
 
+		if(request('password')) {
+			request()->validate([
+				'password' => ['max:255'],
+				'password_confirmation' => ['required', 'max:255']
+			]);
+			if(request('password') == request('password_confirmation')) {
+				$inputs['password'] = request('password');
+			}
+		}
+
 		$user->update($inputs);
 
 		return back();
