@@ -38,10 +38,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
 	];
 
-	public function setPasswordAttribute($value) {
-
-		$this->attributes['password'] = bcrypt($value);
-	}
+#	public function setPasswordAttribute($value) {
+#
+#		$this->attributes['password'] = bcrypt($value);
+#	}
 
 	public function getAvatarAttribute($value) {
 		if (strpos($value, 'https://') !== FALSE || strpos($value, 'http://') !== FALSE) {
