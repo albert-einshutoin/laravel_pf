@@ -41,7 +41,7 @@
         </div>
 		@else
 			<div class="d-grid gap-2 col-6 mx-auto">
-				<a href="/login"><button class="btn btn-primary" type="button">Login for comment</button></a>
+				<a href="{{ route('login') }}"><button class="btn btn-primary" type="button">Login for comment</button></a>
 			</div>
 		@endif
 
