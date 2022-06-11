@@ -27,8 +27,10 @@ php artisan tinker
 ## Test web
 login as admin on testweb
 [testweb](http://133.125.57.31/laravel_pf/)
-mail : aaa@gmail.com
-pw : 12345678
+↓↓↓↓ if you want to login as admin user at testweb ↓↓↓↓
+- name : Admin User
+- mail : aaa@gmail.com
+- pw : 12345678
 
 ## Installation
 Server setting on Virtual Personal Server [VPS]
