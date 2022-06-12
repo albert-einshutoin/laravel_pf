@@ -73,14 +73,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 [albert-einshutoin](https://github.com/albert-einshutoin)
 
 #### Author skill experiences
-PHP 7.4 (Web site development, using FW) / FWを使用したサイトの開発
-Python 2.7, 3.9 (Development of simple software including algorithms) / アルゴリズムを含む簡易的なソフトの開発
-PINE v5 (Development of a simple indicator with reference to doc) / docを参考に簡単なインジケーターの開発
-Golang 1.14 (Basement of lang) / 基礎程度
-[FW] Laravel 7.3, Flask 2.0
-[DB] MySQL 8.0, MariaDB
-[Editor] Vim, VSCode
-[Environment] LAMP
+- PHP 7.4 (Web site development, using FW) / FWを使用したサイトの開発
+- Python 2.7, 3.9 (Development of simple software including algorithms) / アルゴリズムを含む簡易的なソフトの開発
+- PINE v5 (Development of a simple indicator with reference to doc) / docを参考に簡単なインジケーターの開発
+- Golang 1.14 (Basement of lang) / 基礎程度
+- [FW] Laravel 7.3, Flask 2.0
+- [DB] MySQL 8.0, MariaDB
+- [Editor] Vim, VSCode
+- [Environment] LAMP
 
 ##### What I made before
 - Creating a bulletin board using only PHP and HTML
