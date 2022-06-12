@@ -1,11 +1,11 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 # Basement of BBS
-I made this for making myself understand more abbout Laravel, using no copy right templetes web form.
-You can use this for your studying for basement of your services.
+I made this for making myself understand more about Laravel, using no copy right templetes web form.
+You can use this for your studying for basement of your services if you want.
 
 ## Overview
-For the purpose of studying the functionality, I created muti-login BBS.
+For the purpose of studying laravel functionality, I created muti-login BBS.
 Administrator is the only one user who can delete users.
 Deployed on sakura VPS. (refer to the following Test web part)
 
@@ -24,9 +24,8 @@ php artisan tinker
 >>> $user->roles()->attach($admin)
 ```
 
-## Test web
-login as admin on testweb
-[testweb](http://133.125.57.31/laravel_pf/)
+## [Test Web](http://133.125.57.31/laravel_pf/)
+login as admin on [Test Web](http://133.125.57.31/laravel_pf/)
 ↓↓↓↓ if you want to login as admin user at testweb ↓↓↓↓
 - name : Admin User
 - mail : aaa@gmail.com
@@ -48,7 +47,7 @@ Clone from Github
 ```
 ssh-keygen -t rsa
 [ Enter ] 3 times
-cat id_rsa.pub → cpoy and paste on github on ssh setting paga
+cat id_rsa.pub → cpoy and paste on github on ssh setting page
 ```
 
 ## Lisence
