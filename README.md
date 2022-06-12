@@ -39,7 +39,7 @@ php artisan tinker
 ```
 
 ## [Test Web](http://133.125.57.31/laravel_pf/)
-Test Webを置いています。Adminとしてログインする場合は下記を使用してください。
+[Test Web](http://133.125.57.31/laravel_pf/) を置いています。Adminとしてログインする場合は下記を使用してください。
 login as admin on [Test Web](http://133.125.57.31/laravel_pf/)
 ↓↓↓↓ if you want to login as admin user at testweb ↓↓↓↓
 - name : Admin User
@@ -71,7 +71,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Author
 [albert-einshutoin](https://github.com/albert-einshutoin)
-####Author skill experiences
+
+#### Author skill experiences
 PHP 7.4 (Web site development, using FW) / FWを使用したサイトの開発
 Python 2.7, 3.9 (Development of simple software including algorithms) / アルゴリズムを含む簡易的なソフトの開発
 PINE v5 (Development of a simple indicator with reference to doc) / docを参考に簡単なインジケーターの開発
@@ -81,7 +82,7 @@ Golang 1.14 (Basement of lang) / 基礎程度
 [Editor] Vim, VSCode
 [Environment] LAMP
 
-#####What I made before
+##### What I made before
 - Creating a bulletin board using only PHP and HTML
 [ PHP、HTMLのみで掲示板の作成 ]
 - Creating a multi-login bulletin board in Laravel and deploying it from Github on a VPS
