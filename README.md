@@ -83,14 +83,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 | FW |
 | Laravel | 7.3 | (Development of bulletin board site with multi-login function) / マルチログイン機能の掲示板サイト開発
 | Flask | 2.0 | (Development of a site with login functionality) / ログイン機能を持つサイトの開発 |
-| DB |
-|  MySQL | 8.0 |
+| -DB- |
+| MySQL | 8.0 |
 | MariaDB | 10.3.28 |
-| Editor |
-| Vim |
-| VSCode |
-| Environment |
-| LAMP |
+| Editor | | Vim, VSCode |
+| Environment | | LAMP |
 
 ##### What I made before
 - Creating a bulletin board using only PHP and HTML
