@@ -1,5 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
+# :clipboard: Author's skills are at the bottom / 技術関連は最下段に記載してあります :clipboard:
 # Basement of BBS
 I made this for making myself understand more about Laravel, using no copy right templetes web form.
 You can use this for your studying for basement of your services if you want.
@@ -73,14 +74,23 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 [albert-einshutoin](https://github.com/albert-einshutoin)
 
 #### Author skill experiences
-- PHP 7.4 (Web site development, using FW) / FWを使用したサイトの開発
-- Python 2.7, 3.9 (Development of simple software including algorithms) / アルゴリズムを含む簡易的なソフトの開発
-- PINE v5 (Development of a simple indicator with reference to doc) / docを参考に簡単なインジケーターの開発
-- Golang 1.14 (Basement of lang) / 基礎程度
-- [FW] Laravel 7.3, Flask 2.0
-- [DB] MySQL 8.0, MariaDB
-- [Editor] Vim, VSCode
-- [Environment] LAMP
+| Lang / System | Version | Ability |
+| --- | ---- | ---- |
+| PHP | 7.4 | (Development of a site with login functionality) / ログイン機能を持つサイトの開発 |
+| Python | 2.7, 3.9 | (Development of simple software including algorithms) / アルゴリズムを含む簡易的なソフトの開発 |
+| PINE | v5 | (Development of a simple indicator with reference to doc) / docを参考に簡単なインジケーターの開発 |
+| Golang | 1.14 | (Basement of lang) / 基礎程度 |
+| FW |
+| Laravel | 7.3 | (Development of bulletin board site with multi-login function) / マルチログイン機能の掲示板サイト開発
+| Flask | 2.0 | (Development of a site with login functionality) / ログイン機能を持つサイトの開発 |
+| DB |
+|  MySQL | 8.0 |
+| MariaDB | 10.3.28 |
+| Editor |
+| Vim |
+| VSCode |
+| Environment |
+| LAMP |
 
 ##### What I made before
 - Creating a bulletin board using only PHP and HTML
