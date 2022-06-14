@@ -1,7 +1,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 # :clipboard: Author's skills are at the bottom / 技術関連は最下段に記載してあります :clipboard:
-# Basement of BBS
+# Multi-login BBS
 I made this for making myself understand more about Laravel, using no copy right templetes web form.
 You can use this for your studying for basement of your services if you want.
 Laravelの理解度を上げるために、著作権フリーのウェブテンプレートを使用しそれをもとに作成しました。
@@ -20,7 +20,7 @@ What I struggled with
 
 マルチログイン掲示板を効率的にReadableに書いてみました。
 Admin UserはUserの削除等が行えるようになってます。
-さくらVPSにてデプロイをしたました。
+さくらVPSにてデプロイをしました。
 
 詰まった点
 - スキルを見せると言う点に置いてプロファイルページにauthで削除できる部分などを残しています。
